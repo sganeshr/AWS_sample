@@ -1,0 +1,10 @@
+---
+- hosts: local, node1
+  user: root
+  sudo: yes
+  tasks:
+   - name: Installing git
+     apt: pkg=git state=installed update_cache=true
+  
+   - name: Install fish
+     apt: pkg=fish state=installed update_cache=true
